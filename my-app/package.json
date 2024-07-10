@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build",
-    "lazy": "git add . && git commit -m 'init lesson 06' && git push"
+    "lazy": "git add . && git commit -m 'lesson 06' && git push"
   },
   "eslintConfig": {
     "extends": [

@@ -20,4 +20,5 @@ flex-direction: column;
 align-items: center;
 margin: auto;
 width: 70%;
+border: 1px dashed grey;
 }
