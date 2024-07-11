@@ -69,7 +69,7 @@ function Lesson06(){
     }
     interface IAnimal {
         name: string,
-        age: number | string, //union type
+        age: number | string, //union type - объединяющий тип
         canSwim: boolean,
         hasOwner?: boolean // если поставить ?, то это будет необязательный ключ
     }
@@ -87,7 +87,7 @@ function Lesson06(){
 
     }
     
-    const tomAndJerry:IAnimal [] = [tom, jerry]
+    const tomAndJerry:IAnimal [] = [tom, jerry] //массив из объектов заданного типа
     console.log(tomAndJerry);
     
 
@@ -99,6 +99,7 @@ function Lesson06(){
     return(
         <div className="lesson-container">
             <h4>Lesson 06</h4>
+            <p>Урок Typescript часть 1 в комментариях к коду урока 👻</p>
         </div>
     )
 }
