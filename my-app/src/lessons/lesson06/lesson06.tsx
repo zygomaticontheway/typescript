@@ -30,7 +30,7 @@ function Lesson06(){
     console.log(empty);
     
     //5. Типизация arrays
-    const colors = ['red', 'green', 'blue']
+    const colors: string[] = ['red', 'green', 'blue']
     console.log(colors);
     // colors.push(1) - ошибка, ибо другой тип данных в массиве
     colors.push("")

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./counter.css";
+import styles from  "./counter.module.css";
 
 function Counter() {
   //должны явно указывать тип данных в useState
@@ -14,7 +14,7 @@ function Counter() {
   };
 
   return (
-    <div className="lesson-container">
+    <div className={styles.counterValue}>
       <h4>Counter 💯</h4>
       <div>
         <button onClick={handleMinus}>-</button>

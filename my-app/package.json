@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build",
-    "lazy": "git add . && git commit -m 'homework les 07 components migration' && git push"
+    "lazy": "git add . && git commit -m 'lesson 08 + hw  task & init' && git push"
   },
   "eslintConfig": {
     "extends": [

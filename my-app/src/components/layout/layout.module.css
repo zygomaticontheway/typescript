@@ -1,0 +1,31 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh; /*100 относительных единиц, высчитывается относительно видимой области по высоте*/
+}
+.header {
+    width: 100%;
+    background-color: orange;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px; меняют размер контейнера */
+
+}
+
+.main {
+    
+    flex: 1; /* чтобы main занимал все свободное пространство, если контента мало */
+}
+
+.footer {
+    width: 100%;
+    background-color: lightgrey;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
