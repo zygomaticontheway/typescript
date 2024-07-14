@@ -1,0 +1,46 @@
+.forceUsersGrid{
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.forceUsersGrid > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.forceUsersGrid h4{
+    margin-bottom: 0;
+}
+
+
+.forceUsersGrid img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    
+}
+
+.dark{
+    background-color: rgb(255, 140, 140);
+}
+
+.light {
+    background-color: rgb(140, 188, 255);
+}
+
+.lightsaberColors {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lightsaberColorsItem {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border-radius: 2px;
+}
