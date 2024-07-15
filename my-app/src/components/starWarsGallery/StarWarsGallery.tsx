@@ -8,7 +8,7 @@ function StarWarsGallery() {
         <div className="lesson-container">
             <div className={styles.forceUsersGrid}>
             {forceUsers.map((hero, index) => (
-                <HeroCard name={hero.name} age={hero.age} lightsaberColors={hero.lightsaberColors} image={hero.image} isDark={hero.isDark} key={index}/>
+                <HeroCard name={hero.name} age={hero.age} lightsaberColors={hero.lightsaberColors} image={hero.image} isDark={hero?.isDark} key={index}/>
             ))}    
             </div>
         </div>
