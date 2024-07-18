@@ -1,0 +1,20 @@
+.robotForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.robotForm input{
+    margin-bottom: 3px;
+}
+
+.robotForm button {
+    background-color: #ffb649;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 3px;
+}
+
+.formErrors {
+    color: red;
+}

@@ -1,6 +1,6 @@
 import styles from './starWarsGallery.module.css'
 
-interface IHeroCardProps { /* interface можно и импортировать, но можно и так будет понятнее дублировать, ибо здесь можно чтото дописать*/
+interface IHeroCardProps { /* interface можно и импортировать, но можно и так будет понятнее дублировать, ибо здесь можно что-то дописать*/
     name: string,
     age?: number,
     isDark?: boolean,

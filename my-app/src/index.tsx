@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CatFact from './lessons/lesson10/lesson10';
+// import CatFact from './lessons/lesson10/lesson10';
+// import Lesson11 from './lessons/lesson11/Lesson11';
+import Lesson12 from './lessons/lesson12/Lesson12';
 // import Layout from './components/layout/layout';
 // import Lesson09 from './lessons/lesson09/Lesson09';
 // import RandomFox from './homeworks/hw09/RandomFox';
@@ -24,6 +26,7 @@ root.render(
     {/* <Layout/> */}
     {/* <Lesson09/> */}
     {/* <RandomFox/> */}
-    <CatFact/>
+    {/* <CatFact/> */}
+    <Lesson12/>
   </>
 );
