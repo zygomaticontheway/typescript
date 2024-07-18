@@ -5,19 +5,20 @@
 }
 
 .genderForm > input{
-    margin-bottom: 30px;
+    margin-bottom: 3px;
 }
 
 .genderForm > button{
     border: 1px solid black;
     border-radius: 3px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 10px;
 }
 
 .formErrors{
     color: red;
     position: absolute;
-    margin-left: 500px;
-    margin-top: 40px;
+    margin-left: 158px;
+    /* margin-top: 10px; */
+    font-size: 11px;
+    
 }

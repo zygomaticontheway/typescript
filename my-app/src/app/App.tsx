@@ -1,11 +1,11 @@
-import './App.css';
+// import './App.css';
+import Consultation_04 from '../lessons/consultation04/Consultation_04';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello typescript react 🤑🦾</h1>
-
-      
+      <Consultation_04/>
     </div>
   );
 }

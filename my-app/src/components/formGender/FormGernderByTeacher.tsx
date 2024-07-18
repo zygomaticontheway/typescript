@@ -14,11 +14,11 @@ interface iGenderData {
 }
 
 const schema = Yup.object().shape({
-    name: Yup.string().required()
-    // .string()
-    // .required('обязательно введите имя')
-    // .typeError('имя не может быть пустым')
-    // .max(5, 'имя не может быть более 5 символов')
+    name: Yup
+    .string()
+    .required('обязательно введите имя')
+    .typeError('имя не может быть пустым')
+    .max(5, 'имя не может быть более 5 символов')
 });
 
 export default function FormGenderByTeacher() {
@@ -43,9 +43,9 @@ export default function FormGenderByTeacher() {
         validationSchema:schema,
         validateOnChange: false,
         onSubmit: (values: IFormGender, { resetForm }) => {
-            // fetchGender(values.name)
+            fetchGender(values.name)
             console.log(values);
-            // resetForm();
+            resetForm();
         }
     })
 
@@ -57,8 +57,8 @@ export default function FormGenderByTeacher() {
                 <button type="submit">send request</button>
                 {genderData.name && ( //&& это тернарный оператор => если gender.name не пустой, то выполняем что дальше
                     <p>{genderData.name} is {genderData.gender === 'male' ? '👨🏻' : '👩🏻‍🦰'} {genderData.probability * 100}%</p>)}
+                <span className={styles.formErrors}>{formik.errors.name}</span>
             </form>
-            <span className={styles.formErrors}>{formik.errors.name}</span>
         </>
 
     )
