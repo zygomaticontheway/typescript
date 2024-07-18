@@ -20,5 +20,9 @@
     margin-left: 158px;
     /* margin-top: 10px; */
     font-size: 11px;
-    
+
+}
+.nameSpan{
+    color: rgb(12, 12, 131);
+    font-weight: bolder;
 }
