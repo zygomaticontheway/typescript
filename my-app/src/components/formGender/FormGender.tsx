@@ -66,7 +66,7 @@ export default function FormGender() {
             <span className={styles.formErrors}>{formik.errors.name}</span>
         </form>
             {genderData.name && (
-                <p>Name <span className={styles.nameSpan}>{genderData.name}</span> is {genderData.gender} with probability {genderData.probability}</p> 
+                <p>Name <span className={styles.nameSpan}>{genderData.name}</span> is {genderData.gender} with probability {genderData.probability * 100}%</p> 
             )}
         </>
 

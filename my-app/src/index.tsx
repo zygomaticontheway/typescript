@@ -11,12 +11,15 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 // import Lesson09 from './lessons/lesson09/Lesson09';
 // import Lesson11 from './lessons/lesson11/Lesson11';
 // import Lesson12 from './lessons/lesson12/Lesson12';
-import Lesson13 from './lessons/lesson13/Lesson13';
+// import Lesson13 from './lessons/lesson13/Lesson13';
 import Layout from './components/layout/layout';
 import StarWarsGallery from './components/starWarsGallery/StarWarsGallery';
 import FormGender from './components/formGender/FormGender';
 import RobotForm from './components/robotForm/robotForm';
 import MyForm from './components/myForm/MyForm';
+import HomePage from './components/homePage/HomePage';
+import Feedback from './components/feedback/Feedback';
+import Counter from './components/counter/Counter';
 
 
 const root = ReactDOM.createRoot(
@@ -29,11 +32,14 @@ root.render(
     <Routes>
       {/* маршрут родитель в кот мы будем отображать остальные эл-ты */}
       <Route path='/' element={<Layout/>} >
-        <Route path='/' element={<StarWarsGallery/>} />
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/star-wars-gallery' element={<StarWarsGallery/>} />
         <Route path='/gender-form' element={<FormGender/>} />
         <Route path='/robot-form' element={<RobotForm/>} />
         <Route path='/my-form' element={<MyForm/>} />
-        
+        <Route path='/feedback' element={<Feedback/>} />
+        <Route path='/counter' element={<Counter/>} />
+
         {/* <App /> */}
         {/* <MyForm/> */}
         {/* <Layout/> */}
