@@ -1,4 +1,5 @@
-import StarWarsGallery from '../starWarsGallery/StarWarsGallery';
+// import StarWarsGallery from '../starWarsGallery/StarWarsGallery';
+import { Outlet } from 'react-router-dom';
 import styles from './layout.module.css'
 
 
@@ -10,7 +11,7 @@ function Layout(){
                 header
             </header>
             <main className={styles.main}>
-                <StarWarsGallery/>
+                <Outlet/>
             </main>
             <footer className={styles.footer}>
                 footer

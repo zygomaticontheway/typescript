@@ -1,34 +1,52 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Lesson11 from './lessons/lesson11/Lesson11';
-// import CatFact from './lessons/lesson10/lesson10';
-// import Lesson11 from './lessons/lesson11/Lesson11';
-// import Lesson12 from './lessons/lesson12/Lesson12';
-// import Layout from './components/layout/layout';
-// import Lesson09 from './lessons/lesson09/Lesson09';
-// import RandomFox from './homeworks/hw09/RandomFox';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 // import App from './app/App';
+// import Layout from './components/layout/layout';
+// import CatFact from './lessons/lesson10/lesson10';
+// import RandomFox from './homeworks/hw09/RandomFox';
 // import Lesson06 from './lessons/lesson06/lesson06';
 // import Lesson07 from './lessons/lesson07/lesson07';
-// import MyForm from './components/myForm/MyForm';
 // import Lesson08 from './lessons/lesson08/Lesson08';
+// import Lesson09 from './lessons/lesson09/Lesson09';
+// import Lesson11 from './lessons/lesson11/Lesson11';
+// import Lesson12 from './lessons/lesson12/Lesson12';
+import Lesson13 from './lessons/lesson13/Lesson13';
+import Layout from './components/layout/layout';
+import StarWarsGallery from './components/starWarsGallery/StarWarsGallery';
+import FormGender from './components/formGender/FormGender';
+import RobotForm from './components/robotForm/robotForm';
+import MyForm from './components/myForm/MyForm';
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <>
-    {/* <App /> */}
-    {/* <Lesson06/> */}
-    {/* <Lesson07/> */}
-    {/* <MyForm/> */}
-    {/* <Lesson08/> */}
-    {/* <Layout/> */}
-    {/* <Lesson09/> */}
-    {/* <RandomFox/> */}
-    {/* <CatFact/> */}
-    <Lesson11/>
-    {/* <Lesson12/> */}
-  </>
+  //обертка router над всеми эл-ми
+  <HashRouter>
+    {/* обертка для описания маршрутов */}
+    <Routes>
+      {/* маршрут родитель в кот мы будем отображать остальные эл-ты */}
+      <Route path='/' element={<Layout/>} >
+        <Route path='/' element={<StarWarsGallery/>} />
+        <Route path='/gender-form' element={<FormGender/>} />
+        <Route path='/robot-form' element={<RobotForm/>} />
+        <Route path='/my-form' element={<MyForm/>} />
+        
+        {/* <App /> */}
+        {/* <MyForm/> */}
+        {/* <Layout/> */}
+        {/* <RandomFox/> */}
+        {/* <CatFact/> */}
+        {/* <Lesson06/> */}
+        {/* <Lesson07/> */}
+        {/* <Lesson08/> */}
+        {/* <Lesson09/> */}
+        {/* <Lesson11/> */}
+        {/* <Lesson12/> */}
+        {/* <Lesson13/> */}
+      </Route>
+    </Routes>
+  </HashRouter>
 );

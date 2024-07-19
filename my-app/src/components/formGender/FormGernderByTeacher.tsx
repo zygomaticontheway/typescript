@@ -13,12 +13,13 @@ interface iGenderData {
     count: number
 }
 
-const schema = Yup.object().shape({
+const validationSchema = Yup.object().shape({ // имя константы = зарезервированному ключу validationSchema, да так можно, иногда так делают, но запись вызова короче. 
     name: Yup
     .string()
-    .required('обязательно введите имя')
     .typeError('имя не может быть пустым')
     .max(5, 'имя не может быть более 5 символов')
+    .min(2, 'имя не может быть менее 2 символов')
+    .required('обязательно введите имя')
 });
 
 export default function FormGenderByTeacher() {
@@ -31,6 +32,15 @@ export default function FormGenderByTeacher() {
         // console.log(data);
     }
 
+    const handleClean = () => {
+        setGenderData({
+            count: 0,
+            name: '',
+            gender: '',
+            probability: 0
+        })
+    }
+
     const [genderData, setGenderData] = useState<iGenderData>({
         name: '',
         gender: '',
@@ -40,7 +50,8 @@ export default function FormGenderByTeacher() {
 
     const formik = useFormik({
         initialValues: { name: '' } as IFormGender,
-        validationSchema:schema,
+        validationSchema, // вызов функции (которая в переменной) совпадает с названием ключа validationSchema
+        validateOnBlur: true,
         validateOnChange: false,
         onSubmit: (values: IFormGender, { resetForm }) => {
             fetchGender(values.name)
@@ -53,11 +64,15 @@ export default function FormGenderByTeacher() {
         <>
             <h4>Know names gender 🔮</h4>
             <form onSubmit={formik.handleSubmit} className={styles.genderForm} >
-                <input value={formik.values.name} onChange={formik.handleChange} name='name' type="text" placeholder='name' />
-                <button type="submit">send request</button>
+                <input onBlur={formik.handleBlur} value={formik.values.name} onChange={formik.handleChange} name='name' type="text" placeholder='name' />
+                <button type="submit" onClick={handleClean}>send request</button>
                 {genderData.name && ( //&& это тернарный оператор => если gender.name не пустой, то выполняем что дальше
                     <p>{genderData.name} is {genderData.gender === 'male' ? '👨🏻' : '👩🏻‍🦰'} {genderData.probability * 100}%</p>)}
-                <span className={styles.formErrors}>{formik.errors.name}</span>
+                {formik.errors.name && (
+                <div className={styles.errorContainer}>
+                    <span className={styles.formErrors}>{formik.errors.name}</span>
+                </div>
+                )}
             </form>
         </>
 

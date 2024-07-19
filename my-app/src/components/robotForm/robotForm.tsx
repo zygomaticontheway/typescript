@@ -29,15 +29,15 @@ interface IFormValues {
 
     const formik = useFormik({
       initialValues: {
-        model: '123',
-        creator: 'creator',
-        email: 'creator@creator.com'
+        model: '',
+        creator: '',
+        email: ''
       } as IFormValues,
       validationSchema:schema, //добавляет схему валидации из Yup
       validateOnChange: false,//валидирует только при отправке формы, если не указать то при каждом изменении
       onSubmit: (values: IFormValues, {resetForm}) => {
         console.log(values);
-        // resetForm();
+        resetForm();
       }
     })
   

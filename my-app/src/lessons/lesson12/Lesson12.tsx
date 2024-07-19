@@ -10,8 +10,8 @@ export default function Lesson12() {
     <div className="lesson-container">
         <h3>Lesson12</h3>    
         <p>Валидация данных в форме с библиотекой Yup для Formik</p>
-        {/* <RobotForm/> */}
-        <FormGenderByTeacher/>
+        <RobotForm/>
+        {/* <FormGenderByTeacher/> */}
     </div>
   )
 }

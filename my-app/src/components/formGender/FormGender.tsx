@@ -32,19 +32,22 @@ export default function FormGender() {
         const data = await res.json()
         setGenderData(data);
     }
-    const schema = Yup.object().shape({
+    const validationSchema = Yup.object().shape({ // имя константы = зарезервированному ключу validationSchema, да так можно, иногда так делают, но запись вызова короче. 
         name: Yup
             .string()
+            .min(2, 'Too small name, please type more')
             .max(70, 'Too big name')
             .required('Fill that input')
+            .typeError('Here you can only type string')
             .matches(/^[a-zA-Z\s]+$/, 'Please do not use number symbols')
     })
+    
     
     const formik = useFormik({
         initialValues: {
             name: ''
         } as IFormGenderValues,
-        validationSchema:schema,
+        validationSchema, // вызов функции (которая в переменной) совпадает с названием ключа validationSchema
         validateOnChange: false,
         onSubmit: (values: IFormGenderValues, {resetForm},) => {
             console.log(values);

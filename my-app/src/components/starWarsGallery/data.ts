@@ -25,7 +25,7 @@ export const forceUsers : IForceUsersProps[] = [
     },
     {
         name: 'Yoda',
-        age: 1000,
+        age: 900,
         isDark: false,
         lightsaberColors: ['green'],
         image: 'https://static.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png'
