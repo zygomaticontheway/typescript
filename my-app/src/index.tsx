@@ -20,6 +20,8 @@ import MyForm from './components/myForm/MyForm';
 import HomePage from './components/homePage/HomePage';
 import Feedback from './components/feedback/Feedback';
 import Counter from './components/counter/Counter';
+import RickAstley from './components/rickAstley/RickAstley';
+import Shop from './components/shop/Shop';
 
 
 const root = ReactDOM.createRoot(
@@ -39,6 +41,9 @@ root.render(
         <Route path='/my-form' element={<MyForm/>} />
         <Route path='/feedback' element={<Feedback/>} />
         <Route path='/counter' element={<Counter/>} />
+        <Route path='/new' element={<h3>New component 😵‍💫</h3>} />
+        <Route path='/shop' element={<Shop/>} />
+        <Route path='*' element={<div className='lesson-container'><h1>ERROR 404 ☠️</h1> <RickAstley/></div> } />
 
         {/* <App /> */}
         {/* <MyForm/> */}

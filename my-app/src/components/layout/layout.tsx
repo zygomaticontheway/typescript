@@ -1,5 +1,5 @@
 // import StarWarsGallery from '../starWarsGallery/StarWarsGallery';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import styles from './layout.module.css'
 import Header from '../header/Header';
 import Footer from '../footer/Footer';

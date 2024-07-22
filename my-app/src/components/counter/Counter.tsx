@@ -18,7 +18,7 @@ function Counter() {
       <h4>Counter 💯</h4>
       <div>
         <button onClick={handleMinus}>-</button>
-        <span className="counterValue">{count}</span>
+        <span className="counterValue"> {count} </span>
         <button onClick={handlePlus}>+</button>
       </div>
     </div>
