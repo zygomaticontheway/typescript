@@ -21,15 +21,16 @@ function ProductCard({id,
     category,
     image,
     }:IProductCardProps) {
-    return(
+    
+        return(
         <div className={styles.productCardGrid}>
-            <h4>{title}</h4>
+            <h5>{title.length > 20 ? title.substring(0, 20) + '...' : title}</h5>
             <p>{price}</p>
-            <div>
+            <div className={styles.imgWrapper}>
                 <img width ={200} src={image} alt={title} /> 
             </div>
             <p>Description:</p>
-            <p className={styles.description}>{description}</p>
+            <p className={styles.description}>{description.length > 70 ? description.substring(0, 70) + '...' : description}</p>
             <p>Category:</p>
             <p className={styles.description}>{category}</p>
         </div>

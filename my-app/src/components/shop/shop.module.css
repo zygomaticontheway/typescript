@@ -1,0 +1,9 @@
+.cardsContainer{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgb(210, 210,210);
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProductCard from "../productCard/ProductCard"
+import styles from "./shop.module.css"
 
 interface IProductCard { 
     id: number; 
@@ -27,14 +28,20 @@ export default function Shop() {
     
     useEffect(() => {
         fetchShop();
+        console.log("get data!");
+        
     }, [])
 
   return (
     <div className="lesson-container">
         <h1>Oh my Shop </h1>
-        {productCards.map((item) => (
-            <ProductCard id={item.id} title={item.title} price={item.price} description={item.description} category={item.category} image={item.image} />
-        ))}  
+        {productCards.length > 0 && (
+            <div className={styles.cardsContainer}>
+                {productCards.map((item) => (
+                    <ProductCard id={item.id} title={item.title} price={item.price} description={item.description} category={item.category} image={item.image} />
+                ))}  
+            </div>
+        )}
     </div>
   )
 }

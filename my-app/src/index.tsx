@@ -41,7 +41,6 @@ root.render(
         <Route path='/my-form' element={<MyForm/>} />
         <Route path='/feedback' element={<Feedback/>} />
         <Route path='/counter' element={<Counter/>} />
-        <Route path='/new' element={<h3>New component 😵‍💫</h3>} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='*' element={<div className='lesson-container'><h1>ERROR 404 ☠️</h1> <RickAstley/></div> } />
 

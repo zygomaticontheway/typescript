@@ -8,6 +8,10 @@ export const links: ILinks [] = [
         title: '🏡'
     },
     {
+        pathname: '/shop',
+        title: 'shop'
+    },
+    {
         pathname: '/star-wars-gallery',
         title: 'star wars'
     },
@@ -30,13 +34,5 @@ export const links: ILinks [] = [
     {
         pathname: '/counter',
         title: 'counter'
-    },
-    {
-        pathname: '/new',
-        title: 'new component'
-    },
-    {
-        pathname: '/shop',
-        title: 'shop'
     }
 ]
