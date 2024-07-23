@@ -61,7 +61,7 @@ export default function FormGender() {
         <>
         <h4>Find out names gender 🔮</h4>
         <form onSubmit={formik.handleSubmit} className={styles.genderForm} >
-            <input value={formik.values.name} onChange={formik.handleChange} name='name' type="text" placeholder='name'/>
+            <input value={formik.values.name} onChange={formik.handleChange} name='name' type="text" placeholder='input the name'/>
             <button type="submit">send form</button>
             <span className={styles.formErrors}>{formik.errors.name}</span>
         </form>

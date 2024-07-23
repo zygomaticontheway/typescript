@@ -1,7 +1,7 @@
 import styles from './myInput.module.css';
 
 interface IMyInputProps{
-  label: string, 
+  label?: string, 
   name: string, 
   type: string, 
   placeholder: string

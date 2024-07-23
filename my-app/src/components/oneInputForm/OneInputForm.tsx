@@ -1,35 +1,48 @@
 import MyButton from "../myButton/MyButton";
 import { useFormik } from "formik";
+import { useState } from "react";
 import * as Yup from 'yup';
+import styles from "./oneInputForm.module.css"
 
 interface IOneInputForm {
-    value: number
+    inputValue: number
 }
 
 const schema = Yup.object().shape({
-    value: Yup
+    inputValue: Yup
     .number()
     .min(1, 'value must be greater than 0')
     .max(20, 'value must be less than 20')
+    .required('value is required')
 })
 
 export default function OneInputForm() {
 
+    const [inputValue, setInputValue] = useState<number>(20);
+
     const formik = useFormik({
         initialValues:{
-            value: 0
+            inputValue: 20
         } as IOneInputForm,
         validationSchema: schema,
         validateOnChange: true,
-        onSubmit: ( value:IOneInputForm ) => {
-            console.log(value);
+        onSubmit: ( values ) => {
+            setInputValue(values.inputValue)
         }
     })
+
   return (
-    <div className="lesson-container">
-        <input type="number" placeholder="input number from 1 to 20" />
-        <MyButton name="send"/>
-    </div>
+    <form onSubmit={formik.handleSubmit}>
+        {formik.errors.inputValue ? <div className={styles.errorContainer}>{formik.errors.inputValue}</div> : null}
+        <input 
+            type="number" 
+            placeholder="input number from 1 to 20" 
+            value={formik.values.inputValue} 
+            onChange={formik.handleChange}
+            name="inputValue"
+            />
+        <MyButton type="submit" name="apply"/>
+    </form>
   )
 }
 
