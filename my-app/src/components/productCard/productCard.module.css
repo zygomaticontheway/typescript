@@ -31,3 +31,8 @@
     color: darkslategray;
     font-style: italic;
 }
+.price{
+    font-size: 20px;
+    font-weight: bolder;
+    color: indigo;
+}
