@@ -21,6 +21,7 @@
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
+    "uuid": "^10.0.0",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
@@ -30,7 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build",
-    "lazy": "git add . && git commit -m 'lesson 15 + OneInputForm does not work' && git push"
+    "lazy": "git add . && git commit -m 'consultation 6 = toDo list from consultation 5' && git push"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
   }
 }

@@ -12,6 +12,10 @@ export const links: ILinks [] = [
         title: 'shop'
     },
     {
+        pathname: '/todolist',
+        title: 'todolist'
+    },
+    {
         pathname: '/star-wars-gallery',
         title: 'star wars'
     },

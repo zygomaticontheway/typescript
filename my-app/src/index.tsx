@@ -23,6 +23,7 @@ import Counter from './components/counter/Counter';
 import RickAstley from './components/rickAstley/RickAstley';
 import Shop from './components/shop/Shop';
 import ProductPage from './components/productPage/ProductPage';
+import ToDoList from './components/toDoList/ToDoList';
 
 
 const root = ReactDOM.createRoot(
@@ -43,6 +44,7 @@ root.render(
         <Route path='/feedback' element={<Feedback/>} />
         <Route path='/counter' element={<Counter/>} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/todolist' element={<ToDoList/>} /> 
         <Route path='/shop/:id' element={<ProductPage/>} /> {/* импортируем компонент, указываем в path параметр id через : */}
         <Route path='*' element={<div className='lesson-container'><h1>ERROR 404 ☠️</h1> <RickAstley/></div> } />
 
