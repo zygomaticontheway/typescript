@@ -13,8 +13,8 @@ export const Result = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 500px;
+    height: 200px;
     border: 2px solid;
     border-radius: 6px;
     padding: 30px;
