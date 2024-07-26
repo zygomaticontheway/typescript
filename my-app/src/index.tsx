@@ -33,8 +33,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Provider store={store}>
-
-  //обертка router над всеми эл-ми
+  {/* обертка router над всеми эл-ми */}
     <HashRouter>
       {/* обертка для описания маршрутов */}
       <Routes>

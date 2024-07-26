@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-//файл для работы с асинхронными запросами
+// !файл для работы с асинхронными запросами
 //описание асинхронного запроса
 //на каждый новый запрос мы создаем свй action с помощью функций из функции redux createAsyncThunk
 

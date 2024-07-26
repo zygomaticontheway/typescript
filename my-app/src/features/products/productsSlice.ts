@@ -44,7 +44,7 @@ export const productsSlice = createSlice({
             //действия когда данные пришли с успехом
             .addCase(getProducts.fulfilled, (state, action) => {
                 state.isLoading = false //включаем loader
-                state.products = action.payload; // payload - 
+                state.products = action.payload; // payload - добавляем данные в state при успехе
             })
             //действия когда данные пришли с ошибкой
             .addCase(getProducts.rejected, (state, action) => {
