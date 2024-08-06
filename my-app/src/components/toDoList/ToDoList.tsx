@@ -42,10 +42,11 @@ export default function ToDoList() {
         setTaskList(taskList.filter(task => task !== taskToRemove))
     }
 
-    const taskListOutput = taskList.map((task) => {
+    const taskListOutput = taskList.map((task,index) => {
         return (
             <TasksContainer key={v4()}>
-                <TaskItem >{task.taskText}</TaskItem>
+                {/* {index === (taskList.length-1) ? <LastTaskItem>{task.taskText}</LastTaskItem> : <TaskItem>{task.taskText}</TaskItem>} */}
+                <TaskItem isLast={index === (taskList.length-1)}>{task.taskText}</TaskItem>
                 <TaskRemoveButton onClick={() => removeTask(task)}>❌</TaskRemoveButton>
             </TasksContainer>
         )
@@ -53,7 +54,7 @@ export default function ToDoList() {
 
     return (
         <ToDoListContainer>
-            <Title>ToDo list from consultation 5 📋</Title>
+            <Title>ToDo list 📋</Title>
             <InputFormContainer onSubmit={formik.handleSubmit}>
                 <InputForm onChange={formik.handleChange} name='inputData' value={formik.values.inputData} placeholder="input task"></InputForm>
                 <InputButton type="submit" >add task</InputButton>

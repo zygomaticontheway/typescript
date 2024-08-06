@@ -29,3 +29,8 @@ header > a {
     text-decoration: underline;
     font-weight: 600;
 }
+header > span {
+    color: rgb(21, 0, 255);
+    text-decoration: underline;
+    margin-right: 20px;
+}

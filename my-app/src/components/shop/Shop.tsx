@@ -29,8 +29,8 @@ interface IOneInputForm {
 export default function Shop() {
     // ! работа с данными в компонентах через redux:
 
-    // * useAppDispatch -  отправка actions, функций для работы с данными
-    const dispatch = useAppDispatch()
+    // * useAppDispatch -  отправка (данных) actions, функций для работы с данными
+    const dispatch = useAppDispatch();
 
     //получаем данные из store через useAppSelector() - внутренний хук redux
     const { products, isLoading, error } = useAppSelector(state => state.products)
@@ -40,6 +40,7 @@ export default function Shop() {
 
     useEffect(() => {
         //вызываем dispatch и внутри в аргументе вызываем нужный action
+        // только через dispatch мы можем отправить запрос на изменение данных в redux
         dispatch(getProducts());
     }, [dispatch])
 

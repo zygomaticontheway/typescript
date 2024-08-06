@@ -31,7 +31,11 @@ export const productsSlice = createSlice({
     initialState, //первоначальное значение, имя совпадает с переменной (выше) по этому просто ключ без значений
 
     //логика синхронных действий
-    reducers: {},
+    reducers: {
+        cleanProducts: (state) => {
+            state.products = [];
+        }
+    },
 
     //логика асинхронных действий
     //обрабатываем 3 состояния promise
@@ -62,4 +66,4 @@ export const productsSlice = createSlice({
 });
 
 export default productsSlice;
-// export const { } = productsSlice.actions
+export const { cleanProducts } = productsSlice.actions

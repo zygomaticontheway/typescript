@@ -23,20 +23,20 @@ export const links: ILinks [] = [
         pathname: '/gender-form',
         title: 'gender form'
     },
-    {
-        pathname: '/robot-form',
-        title: 'robot form'
-    },
-    {
-        pathname: '/my-form',
-        title: 'my form'
-    },
+    // {
+    //     pathname: '/robot-form',
+    //     title: 'robot form'
+    // },
+    // {
+    //     pathname: '/my-form',
+    //     title: 'my form'
+    // },
     {
         pathname: '/feedback',
         title: 'feedback'
     },
-    {
-        pathname: '/counter',
-        title: 'counter'
-    }
+    // {
+    //     pathname: '/counter',
+    //     title: 'counter'
+    // }
 ]

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // !файл для работы с асинхронными запросами
 //описание асинхронного запроса
-//на каждый новый запрос мы создаем свй action с помощью функций из функции redux createAsyncThunk
+//на каждый новый запрос мы создаем свой action с помощью функций из функции redux createAsyncThunk
 
 export const getProducts = createAsyncThunk(
 
