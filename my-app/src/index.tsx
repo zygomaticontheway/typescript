@@ -24,43 +24,50 @@ import RickAstley from './components/rickAstley/RickAstley';
 import Shop from './components/shop/Shop';
 import ProductPage from './components/productPage/ProductPage';
 import ToDoList from './components/toDoList/ToDoList';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Login from './components/login/Login';
+import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  //обертка router над всеми эл-ми
-  <HashRouter>
-    {/* обертка для описания маршрутов */}
-    <Routes>
-      {/* маршрут родитель в кот мы будем отображать остальные эл-ты */}
-      <Route path='/' element={<Layout/>} >
-        <Route path='/' element={<HomePage/>} />
-        <Route path='/star-wars-gallery' element={<StarWarsGallery/>} />
-        <Route path='/gender-form' element={<FormGender/>} />
-        <Route path='/robot-form' element={<RobotForm/>} />
-        <Route path='/my-form' element={<MyForm/>} />
-        <Route path='/feedback' element={<Feedback/>} />
-        <Route path='/counter' element={<Counter/>} />
-        <Route path='/shop' element={<Shop/>} />
-        <Route path='/todolist' element={<ToDoList/>} /> 
-        <Route path='/shop/:id' element={<ProductPage/>} /> {/* импортируем компонент, указываем в path параметр id через : */}
-        <Route path='*' element={<div className='lesson-container'><h1>ERROR 404 ☠️</h1> <RickAstley/></div> } />
+  <Provider store={store}>
+  {/* обертка router над всеми эл-ми */}
+    <HashRouter>
+      {/* обертка для описания маршрутов */}
+      <Routes>
+        {/* маршрут родитель в кот мы будем отображать остальные эл-ты */}
+        <Route path='/' element={<Layout />} >
+          <Route path='/login' element={<Login/>} />
+          <Route path='/' element={<ProtectedRoute outlet={ <HomePage />} /> }/>
+          <Route path='/star-wars-gallery' element={<ProtectedRoute outlet={<StarWarsGallery />} /> } />
+          <Route path='/gender-form' element={<ProtectedRoute outlet={<FormGender />} /> }/>
+          <Route path='/robot-form' element={<ProtectedRoute outlet={<RobotForm />} /> }/>
+          <Route path='/my-form' element={<ProtectedRoute outlet={<MyForm />} /> }/>
+          <Route path='/feedback' element={<ProtectedRoute outlet={<Feedback />} /> }/>
+          <Route path='/counter' element={<ProtectedRoute outlet={<Counter />} /> }/>
+          <Route path='/shop' element={<ProtectedRoute outlet={<Shop />} /> }/>
+          <Route path='/todolist' element={<ProtectedRoute outlet={<ToDoList />} /> }/>
+          <Route path='/shop/:id' element={<ProtectedRoute outlet={<ProductPage />} /> }/> {/* импортируем компонент, указываем в path параметр id через : */}
+          <Route path='*' element={<div className='lesson-container'><h1>ERROR 404 ☠️</h1> <RickAstley /></div>} />
 
-        {/* <App /> */}
-        {/* <MyForm/> */}
-        {/* <Layout/> */}
-        {/* <RandomFox/> */}
-        {/* <CatFact/> */}
-        {/* <Lesson06/> */}
-        {/* <Lesson07/> */}
-        {/* <Lesson08/> */}
-        {/* <Lesson09/> */}
-        {/* <Lesson11/> */}
-        {/* <Lesson12/> */}
-        {/* <Lesson13/> */}
-      </Route>
-    </Routes>
-  </HashRouter>
+          {/* <App /> */}
+          {/* <MyForm/> */}
+          {/* <Layout/> */}
+          {/* <RandomFox/> */}
+          {/* <CatFact/> */}
+          {/* <Lesson06/> */}
+          {/* <Lesson07/> */}
+          {/* <Lesson08/> */}
+          {/* <Lesson09/> */}
+          {/* <Lesson11/> */}
+          {/* <Lesson12/> */}
+          {/* <Lesson13/> */}
+        </Route>
+      </Routes>
+    </HashRouter>
+  </Provider>
 );
